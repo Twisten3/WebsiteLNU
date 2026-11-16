@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Мала енциклопедія — чотири короткі історії про світ навколо нас."
+    />
+    <meta name="theme-color" content="#f5f4ef" />
+    <title>Виднокрай — мала енциклопедія</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Виднокрай — на головну">
+        <span class="brand-mark" aria-hidden="true">в</span>
+        <span>виднокрай<span class="brand-period">.</span></span>
+      </a>
+      <nav class="header-nav" aria-label="Головна навігація">
+        <a href="#articles">Статті</a>
+        <a class="about-link" href="#about">Про проєкт</a>
+      </nav>
+      <a class="header-cta" href="#articles">
+        Досліджувати <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="home">
+      <section class="hero content-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Мала енциклопедія</p>
+          <h1 id="hero-title">Світ стає ближчим,<br />коли <em>цікаво.</em></h1>
+          <p class="hero-description">
+            Чотири короткі історії про міста, природу й космос. Читай у власному
+            ритмі та відкривай знайоме по-новому.
+          </p>
+          <a class="text-link" href="#articles">
+            Переглянути статті <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <a class="feature-card" href="#article/kyiv" aria-label="Читати статтю: Київ">
+          <img
+            class="feature-image"
+            src="assets/kyiv.jpg"
+            alt="Вид на Київ і Дніпро"
+            fetchpriority="high"
+          />
+          <span class="feature-shade"></span>
+          <span class="feature-label"><span></span> Історія тижня</span>
+          <span class="feature-caption">
+            <span class="feature-kicker">МІСТО · 6 ХВ ЧИТАННЯ</span>
+            <span class="feature-title">Київ — місто на берегах Дніпра</span>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+      </section>
+
+      <section class="library content-width" id="articles" aria-labelledby="library-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Добірка знань <span class="heading-rule"></span></p>
+            <h2 id="library-title">Знайди свою цікавинку</h2>
+          </div>
+          <p class="article-count" id="article-count" aria-live="polite"></p>
+        </div>
+
+        <div class="library-tools">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">Пошук статей</span>
+            <input id="search-input" type="search" placeholder="Наприклад, Карпати" />
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="filters" role="group" aria-label="Фільтр за темою">
+            <button class="filter-button is-active" type="button" data-category="Усі" aria-pressed="true">Усі</button>
+            <button class="filter-button" type="button" data-category="Місто" aria-pressed="false">Місто</button>
+            <button class="filter-button" type="button" data-category="Природа" aria-pressed="false">Природа</button>
+            <button class="filter-button" type="button" data-category="Космос" aria-pressed="false">Космос</button>
+            <button class="filter-button" type="button" data-category="Географія" aria-pressed="false">Географія</button>
+          </div>
+        </div>
+
+        <div class="article-grid" id="article-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>
+          Нічого не знайшлося. Спробуй інший запит або тему.
+        </p>
+      </section>
+
+      <section class="about content-width" id="about">
+        <span class="about-mark" aria-hidden="true">✳</span>
+        <div>
+          <p class="eyebrow">Трохи про нас</p>
+          <h2>Менше шуму.<br /><em>Більше відкриттів.</em></h2>
+        </div>
+        <p class="about-copy">
+          «Виднокрай» — невеликий навчальний проєкт про цікаві місця, явища й
+          ідеї. У цій версії є рівно чотири статті, написані простою мовою, та
+          фотографії з відкритою ліцензією.
+        </p>
+      </section>
+
+      <section class="article-view content-width" id="article-view" hidden></section>
+    </main>
+
+    <footer class="site-footer content-width">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">в</span>
+        <span>виднокрай<span class="brand-period">.</span></span>
+      </a>
+      <p>Маленька енциклопедія великого світу</p>
+      <a class="back-to-top" href="#home">На початок ↑</a>
+    </footer>
+  </body>
+</html>
